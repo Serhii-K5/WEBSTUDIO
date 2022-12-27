@@ -1,0 +1,811 @@
+:root {
+  --primary-color: #ffffff;
+  --primary-text-color: #2e2f42;
+  --second-text-color: #434455;
+  --hover-effect-color: #5861c3;
+  --backgrounds-color: #f4f4fd;
+  --botton-background-color: #404bbf;
+  --botton-hover-color: #4d5ae5;
+  --footer-p-color: #e7e9fc;
+  --second-font-weight: 500;
+  --header-font-weight: 700;
+  --primary-width: 1440px;
+  --primary-gap: 8px;
+  --primary-margin-bottom: 32px;
+  --left-margin: 24px;
+  --top-margin: 48px;
+  --size-16px: 16px;
+  --transition-dur-and-timing-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration-line: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "Roboto", "sans-serif";
+  font-size: var(--size-16px);
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: green;
+  /* min-width: 320px; */
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* -- Header -- */
+.header {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+  background-color: var(--primary-color);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+/* -- MOBILE -- */
+/* 480-100% */
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* -- TABLET -- */
+/* 768-100% */
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .container {
+    width: 768px;
+  }
+
+  .header .container {
+    justify-content: flex-start;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .header-logo {
+    /* margin-right: 77px; */
+    margin-right: 124px;
+  }
+
+  .container-address {
+    margin-left: auto;
+  }
+
+  .address-header {
+    line-height: 1.5;
+  }
+
+  .card-list {
+    justify-content: center;
+  }
+
+  .address-header {
+    padding-top: var(--left-margin);
+    padding-bottom: var(--left-margin);
+  }
+
+  .navigation-list {
+    display: flex;
+  }
+
+  .navigation-item+.navigation-item {
+    margin-left: 40px;
+  }
+
+  .navigation-link {
+    position: relative;
+    font-weight: var(--second-font-weight);
+    color: var(--primary-text-color);
+    text-decoration-line: none;
+    line-height: 1.5;
+
+    transition: color var(--transition-dur-and-timing-fun),
+      opacity var(--transition-dur-and-timing-fun);
+  }
+
+  .navigation-link:hover,
+  .navigation-link:focus,
+  .navigation-link:active {
+    color: var(--botton-hover-color);
+    opacity: 1;
+  }
+
+  .underlining::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 2px;
+    border: transparent;
+    background-color: var(--primary-color);
+
+    transition: background-color var(--transition-dur-and-timing-fun);
+  }
+
+  .underlining:hover:after,
+  .underlining:focus:after {
+    background-color: var(--botton-hover-color);
+  }
+
+  .hero {
+    max-width: 768px;
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/tablet-people-office.webp");
+
+    background-size: 768px;
+  }
+
+  .hero .container {
+    width: 522px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .site-theme {
+    width: 492px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+}
+
+/* -- DESKTOP -- */
+/* 1200-100% */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1128px;
+  }
+
+  .address-item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .address-header {
+    color: var(--second-text-color);
+    line-height: 1.5;
+
+    transition: color var(--transition-dur-and-timing-fun);
+  }
+
+  .address-list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .hero {
+    max-width: 1440px;
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/desktop-people-office.webp");
+
+    background-size: 1440px;
+  }
+
+  .hero .container {
+    padding-top: 192px;
+    padding-bottom: 192px;
+  }
+}
+
+
+/* 0-1199px */
+/* @media screen and (max-width: 1199px) {
+  
+} */
+
+/* -- MOBILE -- */
+/* 0-767px */
+@media screen and (max-width: 767px) {
+  /* .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .hero .container {
+    /* width: 522px; */
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .header .container {
+    position: relative;
+    justify-content: space-between;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .container-address {
+    display: none;
+  }
+
+  .menu-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    /* padding: ; */
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    /* box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5); */
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity var(--transition-dur-and-timing-fun),
+      visibility var(--transition-dur-and-timing-fun);
+  }
+
+  .mobile-menu .container {
+    display: block;
+    padding: 40px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .modal-close-btn {
+    top: 40px;
+    right: 40px;
+  }
+
+  .mobile-menu .navigation-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: var(--header-font-weight);
+    font-size: 36px;
+    line-height: 1.1111;
+    /*letter-spacing: 0.02em;*/
+    text-transform: capitalize;
+
+    /* color: var(--primary-text-color); */
+  }
+
+  .mobile-menu .navigation-link {
+    /* padding: 0; */
+    margin-top: 40px;
+  }
+
+  .mobile-menu .address-list {
+    /* padding: 0; */
+    margin-top: 284px;
+    height: 104px;
+  }
+
+  /* .mobile-menu .navigation-link:last-child {
+    margin-bottom: 284px;
+  } */
+
+  /* .mobile-menu .navigation-link:first-child {
+    margin-top: 16px;
+    padding-top: 16px;
+  } */
+
+  /* .mobile-menu .navigation-link:not(first-child) {
+    margin-top: 40px;    
+  } */
+
+  .mobile-menu .address-item {
+    /* padding: 0; */
+    display: flex;
+    height: 40px;
+    align-items: center;
+  }
+
+  .address-item:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .address-header {
+    font-size: 20px;
+    line-height: 1.2;
+    /* padding-top: var(--left-margin);
+    padding-bottom: var(--left-margin); */
+
+
+    /* создать плавное увеличение шрифта */
+
+
+
+    /* transition: font-size var(--transition-dur-and-timing-fun), */
+    /* transition: font-scale var(--transition-dur-and-timing-fun),
+      color var(--transition-dur-and-timing-fun); */
+    transition: color var(--transition-dur-and-timing-fun);
+    /* ,
+      all var(--transition-dur-and-timing-fun); */
+  }
+
+
+  /* @keyframes font-scale {
+    from {
+      font-size: 20px;
+    }
+
+    to {
+      font-size: 36px;
+    }
+  } */
+
+  /* @keyframes font-scale {
+    from {
+      font-size: 55.5555%;
+    }
+
+    to {
+      font-size: 100%;
+    }
+  } */
+
+  .address-header:hover,
+  .address-header:focus,
+  .address-header:active {
+
+    /* transition: font-scale var(--transition-dur-and-timing-fun); */
+
+    font-size: 36px;
+    line-height: 1.1111;
+    /* scale: 1.8; */
+    /* margin-bottom: 40px; */
+  }
+
+  .mobile-menu .card-item-link {
+    background-color: #4d5ae5;
+  }
+
+  .mobile-menu .card-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-menu .card-item:not(:last-child) {
+    margin-right: 56px;
+  }
+
+  .mobile-menu .card-list {
+    margin-top: 48px;
+    justify-content: left;
+  }
+
+  .hero {
+    max-width: 428px;
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/mobile-people-office.jpg");
+
+    background-size: 428px;
+  }
+
+  .hero .container {
+    width: 347px;
+    /* max-width: 317px; */
+    /* max-width: 347px;
+      min-width: 320px; */
+  }
+
+  .site-theme {
+    max-width: 347px;
+    min-width: 320px;
+    font-size: 36px;
+    line-height: 1.1111;
+  }
+}
+
+
+.logo-part1,
+.logo-part2 {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-decoration-line: none;
+}
+
+.header .logo-part1,
+.navigation-link,
+.address-header {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-top: var(--left-margin);
+  padding-bottom: var(--left-margin);
+}
+
+.address-header {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-part1 {
+  color: var(--hover-effect-color);
+  transition: color var(--transition-dur-and-timing-fun);
+}
+
+.logo-part2 {
+  color: var(--primary-text-color);
+}
+
+.logo-part1:hover,
+.logo-part1:hover,
+.address-header:hover,
+.logo-part1:focus,
+.logo-part1:focus,
+.address-header:focus {
+  color: var(--hover-effect-color);
+}
+
+/* .mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+} */
+
+.modal-close-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 24px;
+  right: 24px; */
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: border-radius var(--transition-dur-and-timing-fun),
+    border-shadow var(--transition-dur-and-timing-fun);
+}
+
+.modal-close-btn:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 4px;
+}
+
+.navigation-link {
+  position: relative;
+  font-weight: var(--second-font-weight);
+  color: var(--primary-text-color);
+  text-decoration-line: none;
+  line-height: 1.5;
+
+  transition: color var(--transition-dur-and-timing-fun),
+    opacity var(--transition-dur-and-timing-fun);
+}
+
+.navigation-link:hover,
+.navigation-link:focus,
+.navigation-link:active {
+  color: var(--botton-hover-color);
+  opacity: 1;
+}
+
+.address-header {
+  color: var(--second-text-color);
+  /* line-height: 1.5; */
+
+  transition: color var(--transition-dur-and-timing-fun);
+}
+
+
+.card-block {
+  padding: 32px 0px 36px 0px;
+}
+
+.card-list {
+  display: flex;
+  /* justify-content: center; */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card-block .card-list {
+  margin-top: 12px;
+}
+
+.card-item-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color var(--transition-dur-and-timing-fun);
+}
+
+/* .card-block .card-item-link {
+  background-color: #4d5ae5;
+} */
+
+.card-item-link:hover,
+.card-item-link:focus,
+.card-item-link:active {
+  background-color: #31D0AA;
+}
+
+
+.card-svg {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* -- "Hero" -- */
+.hero {
+  margin: 0 auto;
+  text-align: center;
+
+  margin: 0 auto;
+  text-align: center;
+  /* max-width: 1440px; */
+
+  /* background-image: linear-gradient(to right,
+      rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url("../images/people-office.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: 1440px; */
+}
+
+
+
+
+/* -- TABLET -- */
+/* 768-100% */
+/* @media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/tablet-people-office.webp");
+
+    background-size: 768px;
+  }
+
+  .hero .container {
+    width: 522px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .site-theme {
+    width: 492px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+} */
+
+
+/* -- DESKTOP -- */
+/* 1200-100% */
+/* @media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1440px;
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/desktop-people-office.webp");
+
+    background-size: 1440px;
+  }
+
+  .hero .container {
+    padding-top: 192px;
+    padding-bottom: 192px;
+  }
+} */
+
+
+/* 0-1199px */
+/* @media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+} */
+
+/* -- MOBILE -- */
+/* 0-767px */
+/* @media screen and (max-width: 767px) {
+  .hero {
+    max-width: 428px;
+
+
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/mobile-people-office.jpg");
+
+    background-size: 428px;
+  }
+
+  .hero .container { */
+/* width: 347px; */
+/* max-width: 317px; */
+/* max-width: 347px;
+    min-width: 320px; */
+/* }
+
+  .site-theme {
+    max-width: 347px;
+    min-width: 320px;
+    font-size: 36px;
+    line-height: 1.1111;
+  }
+} */
+
+/* @media screen and (max-width: 319px) {
+  .hero .container {}
+} */
+
+
+
+
+
+.site-theme {
+  font-weight: var(--header-font-weight);
+  color: var(--primary-color);
+}
+
+.style-button {
+  font-family: inherit;
+  font-weight: var(--second-font-weight);
+  font-size: var(--size-16px);
+
+  background-color: var(--backgrounds-color);
+  color: var(--botton-hover-color);
+  letter-spacing: 0.04em;
+
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  transition: background-color var(--transition-dur-and-timing-fun),
+    box-shadow var(--transition-dur-and-timing-fun);
+}
+
+.hero .style-button {
+  display: inline;
+  margin-top: var(--top-margin);
+  line-height: 1.17;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero .style-button,
+.modal .style-button {
+  text-align: center;
+  width: 170px;
+  height: 51px;
+  background-color: var(--hover-effect-color);
+  color: var(--primary-color);
+
+  /* transition: background-color var(--transition-dur-and-timing-fun),
+    box-shadow var(--transition-dur-and-timing-fun); */
+}
+
+.hero .style-button:hover,
+.modal .style-button:hover,
+.subscribe-btn:hover,
+.hero .style-button:focus,
+.modal .style-button:focus,
+.subscribe-btn:focus {
+  background-color: var(--hover-effect-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.hero .style-button:active,
+.modal .style-button:active,
+.subscribe-btn:active {
+  background-color: var(--botton-background-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+}
+
+
+
+
+/* від 1200px - це декстоп
+від 768px до 1199px - це планшет
+від 320 до 767 - це мобільна версія
+Перевірятися верстка буде на 320,
+428,768 та 1200. 
+Менше 320 при роботі в'юпорт не зменшуйте. */
