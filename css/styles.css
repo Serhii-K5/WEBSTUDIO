@@ -1238,7 +1238,7 @@ img {
   max-width: 396px;
 }
 
-.project-cards-item:not(:nth-last-child) {
+.project-cards-item:not(:last-child) {
   margin-bottom: 48px;
 }
 
