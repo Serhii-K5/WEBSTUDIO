@@ -256,6 +256,7 @@ img {
 .mobile-menu .container {
   display: block;
   padding: 40px;
+  max-width: 100%;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 }
 
@@ -359,7 +360,7 @@ img {
   }
 
   .container {
-    max-width: 768px;
+    max-width: 798px;
   }
 
   .header .container {
@@ -405,7 +406,7 @@ img {
 
   .underlining::after,
   .studio::after,
-  .portfolio::after {
+  .portfolio-link::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -813,8 +814,8 @@ img {
 
 .card-list {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* row-gap: 24px; */
+  flex-wrap: wrap;
+  row-gap: 24px;
   padding: 0;
 }
 
@@ -849,8 +850,6 @@ img {
 
 .card-svg {
   display: block;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   padding: 0;
 }
@@ -1175,9 +1174,7 @@ img {
 
   .footer-container {
     flex-wrap: nowrap;
-
     width: 100%;
-
   }
 
 
@@ -1250,7 +1247,7 @@ img {
 }
 
 .portfolio-main .style-button {
-  padding: 12px var(--second-gap);
+  padding: 8px var(--second-gap);
   line-height: 1.5;
   border: 1px solid var(--footer-p-color);
 
@@ -1277,36 +1274,40 @@ img {
 } */
 
 .project-cards {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 72px;
   justify-content: center;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .project-cards-item {
   max-width: 396px;
 }
 
-.project-cards-item:not(:last-child) {
+/* .project-cards-item:not(:last-child) {
   margin-bottom: 48px;
-}
+} */
 
 /* -- "Portfolio page" -- MOBILE (480px-100%) -- */
 /* ============================================================ */
 @media screen and (min-width: 480px) {
-  .project-cards {
+  /* .project-cards {
     row-gap: 72px;
-  }
+  } */
 
-  .project-cards-item {
+  /* .project-cards-item {
     width: 396px;
-  }
+  } */
 }
 
 /* -- "Portfolio page" -- TABLET (768px-100%)-- */
 /* ============================================================ */
 @media screen and (min-width: 768px) {
   .project-cards {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     justify-content: left;
     column-gap: 24px;
     row-gap: 48px;
@@ -1555,8 +1556,8 @@ img {
 
 /* -- MOBILE (0-316px) -- */
 /* ============================================================ */
-@media screen and (max-width: 316px) {
+/* @media screen and (max-width: 316px) {
   * {
     display: none;
   }
-}
+} */
