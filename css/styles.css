@@ -323,7 +323,8 @@ img {
 
 .address-header-tel {
   line-height: 1.1111;
-  font-size: 36px;
+  font-size: 8.5vw;
+  /* 36px; */
   color: var(--botton-hover-color);
 }
 
@@ -336,9 +337,9 @@ img {
     margin-right: 13.3vw;
   }
 
-  .address-header-tel {
+  /* .address-header-tel {
     font-size: 8.5vw;
-  }
+  } */
 }
 
 .address-item:not(:first-child) {
@@ -360,7 +361,7 @@ img {
   }
 
   .container {
-    max-width: 798px;
+    max-width: 768px;
   }
 
   .header .container {
